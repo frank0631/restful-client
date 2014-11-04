@@ -1,0 +1,22 @@
+allprojects {
+    version = '1.0'
+    group = ''
+    apply plugin: 'idea'
+}
+
+project(':app'){
+    apply plugin: 'java'
+    apply plugin: 'application'
+
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        compile 'org.glassfish.jersey.core:jersey-client:2.13'
+        compile 'com.squareup.retrofit:retrofit:1.7.1'
+        compile 'com.google.code.gson:gson:1.7.1'
+        compile 'com.n3twork.druid:alphanum:1.0.3'
+        testCompile group: 'junit', name: 'junit', version: '4.11'
+    }
+}
