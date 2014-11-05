@@ -1,6 +1,4 @@
-package com.augmate.fullstack;
-
-import static java.lang.System.out;
+package com.augmate.dreamfactory;
 
 import javax.ws.rs.client.*;
 import javax.ws.rs.core.MediaType;
