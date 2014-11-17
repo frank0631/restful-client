@@ -7,7 +7,7 @@ import com.google.gson.annotations.Expose;
 public class Record {
 
     @Expose
-    private Integer id;
+    private String _id;
     @Expose
     private Integer user;
     @Expose
@@ -18,8 +18,8 @@ public class Record {
      * @return
      * The id
      */
-    public Integer getId() {
-        return id;
+    public String getId() {
+        return _id;
     }
 
     /**
@@ -27,8 +27,8 @@ public class Record {
      * @param id
      * The id
      */
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId(String _id) {
+        this._id = _id;
     }
 
     /**
@@ -70,7 +70,7 @@ public class Record {
     @Override
     public String toString(){
         StringBuffer record=new StringBuffer();
-        record.append(" id: ");
+        record.append(" _id: ");
         record.append(getId());
         record.append(" user: ");
         record.append(getUser());
