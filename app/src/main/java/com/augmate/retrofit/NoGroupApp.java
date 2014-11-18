@@ -1,4 +1,4 @@
-package com.augmate.dreamfactory;
+package com.augmate.retrofit;
 
 import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;

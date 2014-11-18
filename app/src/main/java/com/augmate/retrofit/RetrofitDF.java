@@ -1,4 +1,4 @@
-package com.augmate.dreamfactory;
+package com.augmate.retrofit;
 
 import com.google.gson.annotations.Expose;
 import retrofit.RestAdapter;
@@ -9,7 +9,7 @@ import retrofit.client.Response;
 import retrofit.http.*;
 import retrofit.mime.TypedFile;
 
-public class RetrofitSample {
+public class RetrofitDF {
 
     public static class Login{
         @Expose
@@ -44,7 +44,7 @@ public class RetrofitSample {
         
         TypedFile fbsTf = new TypedFile("image/jpeg",new File("fluffy-baby-seal.jpg"));
         service.uploadImg(session.getSessionId(),fbsTf,"fluffy-baby-seal");
-        System.out.println(service.listImg(session.getSessionId()));
+        System.out.println(service.listImg(session.getSessionId()).toString());
         
     }
     catch(Exception ex){

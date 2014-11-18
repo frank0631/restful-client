@@ -1,11 +1,11 @@
-package com.augmate.dreamfactory;
+package com.augmate.jersey;
 
 import javax.ws.rs.client.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 
-public final class JerseySample {
+public final class JerseyDF {
 
     public static void main(final String[] args) {
 
