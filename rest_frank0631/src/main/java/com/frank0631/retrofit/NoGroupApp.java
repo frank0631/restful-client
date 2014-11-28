@@ -1,4 +1,4 @@
-package com.augmate.retrofit;
+package com.frank0631.retrofit;
 
 import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;

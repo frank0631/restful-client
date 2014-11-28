@@ -4,7 +4,7 @@ allprojects {
     apply plugin: 'idea'
 }
 
-project(':app'){
+project(':rest_frank0631'){
     apply plugin: 'java'
     apply plugin: 'application'
 
@@ -20,4 +20,14 @@ project(':app'){
         compile 'com.n3twork.druid:alphanum:1.0.3'
         testCompile group: 'junit', name: 'junit', version: '4.11'
     }
+    
+    task fatJar(type: Jar) {
+        manifest {
+            attributes 'Implementation-Title': 'restful client frank0631', 'Implementation-Version': version
+        }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+    
 }

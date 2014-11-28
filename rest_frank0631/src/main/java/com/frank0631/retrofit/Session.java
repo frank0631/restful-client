@@ -1,4 +1,4 @@
-package com.augmate.retrofit;
+package com.frank0631.retrofit;
 
 import java.util.ArrayList;
 import java.util.List;

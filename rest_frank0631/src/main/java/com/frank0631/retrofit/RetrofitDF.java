@@ -1,4 +1,4 @@
-package com.augmate.retrofit;
+package com.frank0631.retrofit;
 
 import com.google.gson.annotations.Expose;
 import retrofit.RestAdapter;
@@ -11,7 +11,7 @@ import retrofit.mime.TypedFile;
 
 public class RetrofitDF {
 
-    public static class Login{
+   public static class Login{
         @Expose
         String email;
         @Expose
@@ -42,10 +42,15 @@ public class RetrofitDF {
         // for (Record record : currentRecords.getRecord())
         //     System.out.println(record.toString());
         
-        TypedFile fbsTf = new TypedFile("image/jpeg",new File("fluffy-baby-seal.jpg"));
-        service.uploadImg(session.getSessionId(),fbsTf,"fluffy-baby-seal");
-        System.out.println(service.listImg(session.getSessionId()).toString());
-        
+        //TypedFile fbsTX = new TypedFile("image/jpeg",new File("fluffy-baby-seal.jpg"));
+        //service.uploadImg(session.getSessionId(),fbsTX,"fluffy-baby-seal");
+        System.out.println(service.listImg(session.getSessionId()));
+
+        // Response imgRX = service.getImg(session.getSessionId(),"fluffy-baby-seal");
+        // TypedByteArray fbsRX = (TypedByteArray)imgRX.getBody();
+        // FileOutputStream fos = new FileOutputStream("downloaded-fluffy-baby-seal.jpg");
+        // fbsRX.writeTo(fos);
+        // fos.close();
     }
     catch(Exception ex){
         ex.printStackTrace();
@@ -75,9 +80,10 @@ public class RetrofitDF {
         @Headers({"X-DreamFactory-Application-Name: trivia"})
         @GET("/Images/ocr")
         public Response listImg(@Header("X-DreamFactory-Session-Token") String sessionid);
-                
+
+        @Headers({"X-DreamFactory-Application-Name: trivia"})
         @GET("/Images/ocr/{filepath}")
-        public TypedFile getImg(@Header("X-DreamFactory-Session-Token") String sessionid, 
+        public Response getImg(@Header("X-DreamFactory-Session-Token") String sessionid,
                 @Path("filepath") String id);
         
         @Headers({"X-DreamFactory-Application-Name: trivia"})
@@ -87,4 +93,3 @@ public class RetrofitDF {
 
     }
 }
-

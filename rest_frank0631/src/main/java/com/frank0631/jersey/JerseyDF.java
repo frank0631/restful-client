@@ -1,4 +1,4 @@
-package com.augmate.jersey;
+package com.frank0631.jersey;
 
 import javax.ws.rs.client.*;
 import javax.ws.rs.core.MediaType;
