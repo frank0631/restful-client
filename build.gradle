@@ -8,7 +8,7 @@ project(':rest_frank0631'){
     apply plugin: 'java'
     apply plugin: 'application'
 
-    mainClassName = "com.augmate.dreamfactory.RetrofitSample"
+    mainClassName = "com.frank0631.retrofit.RetrofitCV"
 
     repositories {
         mavenCentral()
